@@ -1,0 +1,9 @@
+body{
+  background-color: black;
+  color:white;
+  margin:0px;
+  padding:0px;
+}
+header,nav{
+  z-index:100001!important;
+}
