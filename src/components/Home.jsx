@@ -21,7 +21,7 @@ const Home = () => {
     link.click();
   };
   return (
-    <div className="mt-20 relative">
+    <div className="mt-20  relative">
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black">
       <div className="container mx-auto px-4 py-8 relative z-10">
@@ -34,7 +34,7 @@ const Home = () => {
             />
           </div>
           <div className="md:w-2/3 md:pl-8">
-          <h1 className="text-4xl text-white sm:text-center md:text-3xl  xl:text-5xl 2xl:text-5xl lg:sm:text-3xl  font-bold mb-4">Prathyusha</h1>
+          <h1 className="text-4xl text-white md:text-center   sm:ml-8 md:text-3xl  xl:text-5xl 2xl:text-5xl lg:sm:text-3xl text-center font-bold mb-4">Prathyusha</h1>
             <p className="text-base mt-10">I am Prathyusha, a 20-year-old engineering student from Surathkal, Mangalore. Currently, I am in my third year of studying Computer Science at St. Joseph Engineering College, Mangalore. Passionate about technology and problem-solving, I am eager to continue expanding my knowledge and skills in the field of computer science.</p>
           
             <div className="flex space-x-6 mt-4">

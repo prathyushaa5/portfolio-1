@@ -3,7 +3,7 @@ import { FaEnvelope, FaInstagram, FaLinkedin, FaFacebook, FaPhone, FaWhatsapp } 
 
 const Contact = () => {
   return (
-    <div className="mt-40 flex flex-col items-center">
+    <div className="mt-40 flex flex-col  items-center">
       <div className="container">
         {/* Email */}
         <div className="flex items-center mb-4">

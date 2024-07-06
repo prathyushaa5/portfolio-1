@@ -19,7 +19,7 @@ const AboutMeTabs = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container  mx-auto px-4 py-8">
       <div className="flex flex-col md:flex-row items-center justify-center">
         <div className="md:w-1/3 mb-4 md:mb-0">
         
@@ -93,23 +93,23 @@ const AboutMeTabs = () => {
         </div>
         
       </div>
-      <div className="flex w-full p-10 bg-gray-900 text-white flex-wrap flex-col justify-center ml-0 mr-0 mt-20 gap-4">
-      <div className="flex items-center gap-4  justify-center  align-center">
-        Languages:<img src={photo1} alt="Photo 1" className=" w-12 " />
-        <img src={photo2} alt="Photo 2" className=" w-12 " />
-        <img src={photo8} alt="Photo 3" className=" w-12 " />
-        <img src={photo6} alt="Photo 4" className=" w-12 " />
-        <img src={photo7} alt="Photo 5" className=" w-12 " />
-        <img src={photo3} alt="Photo 6" className=" w-12 " />
-        <img src={photo4} alt="Photo 7" className=" w-12 " />
+      <div className="flex w-full p-10 bg-black text-white flex-wrap flex-col justify-center ml-0 mr-0 mt-20 gap-4">
+      <div className="flex items-center gap-3  justify-center  align-center">
+        Languages:<img src={photo1} alt="Photo 1" className=" md:w-12  w-6 " />
+        <img src={photo2} alt="Photo 2" className=" md:w-12 w-6 " />
+        <img src={photo8} alt="Photo 3" className=" md:w-12 w-6 " />
+        <img src={photo6} alt="Photo 4" className="  md:w-12 w-6 " />
+        <img src={photo7} alt="Photo 5" className="  md:w-12 w-6 " />
+        <img src={photo3} alt="Photo 6" className=" md:w-12 w-6 " />
+        <img src={photo4} alt="Photo 7" className=" md:w-12  w-6 " />
       </div>
       <div className="flex items-center  justify-center gap-4">
         Libraries&Tools:
-        <img src={photo5} alt="Photo 2" className=" w-12 " />
-        <img src={photo9} alt="Photo 3" className=" w-12 " />
-        <img src={photo10} alt="Photo 3" className=" w-12 " />
-        <img src={photo11} alt="Photo 3" className=" w-12 " />
-       <img src={photo12} alt="Photo 4" className=" w-12"/>
+        <img src={photo5} alt="Photo 2" className=" md:w-12 w-6 " />
+        <img src={photo9} alt="Photo 3" className=" md:w-12 w-6 " />
+        <img src={photo10} alt="Photo 3" className=" md:w-12 w-6 " />
+        <img src={photo11} alt="Photo 3" className=" md:w-12 w-6 " />
+       <img src={photo12} alt="Photo 4" className=" md:w-12 w-6"/>
       </div>
     </div>
     </div>
