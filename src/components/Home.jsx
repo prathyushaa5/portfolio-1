@@ -9,12 +9,11 @@ import AboutMeTabs from './AboutMeTabs';
 const Home = () => {
   const handleDownload = () => {
     // Replace with the path to your CV file
-    const cvUrl = "../assets/resume.pdf"
-    
+    const cvUrl = "../assets/prathyusha-resume.pdf"
     // Create a link element
     const link = document.createElement('a');
     link.href = cvUrl;
-    link.download = 'resume.pdf'; // Optional: Set the default filename for the download
+    link.download = 'resume-prathyusha.pdf'; // Optional: Set the default filename for the download
     link.target = '_blank'; // Optional: Open in a new tab
     
     // Trigger the download
@@ -38,21 +37,21 @@ const Home = () => {
             <p className="text-base mt-10">I am Prathyusha, a 20-year-old engineering student from Surathkal, Mangalore. Currently, I am in my third year of studying Computer Science at St. Joseph Engineering College, Mangalore. Passionate about technology and problem-solving, I am eager to continue expanding my knowledge and skills in the field of computer science.</p>
           
             <div className="flex space-x-6 mt-4">
-      <a href="https://www.instagram.com/your-instagram-profile" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-500">
+      <a href="https://instagram.com/_prathyushha/" target="_self" rel="noopener noreferrer" className="text-white hover:text-gray-500">
         <FontAwesomeIcon icon={faInstagram} size="2x" />
       </a>
-      <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-500">
+      <a href="https://www.linkedin.com/in/prathyusha-acharya/" target="_self" rel="noopener noreferrer" className="text-white hover:text-gray-500">
         <FontAwesomeIcon icon={faLinkedin} size="2x" />
       </a>
-      <a href="https://github.com/your-github-profile" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-500">
+      <a href="https://github.com/prathyushaa5" target="_self" rel="noopener noreferrer" className="text-white hover:text-gray-500">
         <FontAwesomeIcon icon={faGithub} size="2x" />
       </a>
     </div>
-    <button onClick={handleDownload} className="mt-4 mb-4 border-2  sm:w-1/4 border-white-500 p-2 rounded-md text-white-500 hover:bg-gray-900 hover:text-white transition duration-300 ease-in-out">
+    <button  className="mt-4 mb-4 border-2  sm:w-1/4 border-white-500 p-2 rounded-md text-white-500 hover:bg-gray-900 hover:text-white transition duration-300 ease-in-out">
        
           {/* <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 17l-4 4m0 0l-4-4m4 4V3m0 13.5L7.5 12M16 6v2a2 2 0 01-2 2H10a2 2 0 01-2-2V6a2 2 0 012-2h2a2 2 0 012 2v2h2a2 2 0 012-2zm0 0a2 2 0 002-2h2a2 2 0 012 2v12a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2m0 0a2 2 0 00-2-2V6a2 2 0 012-2h2a2 2 0 012 2v9.5m0 0L16.5 12"></path> */}
        
-        Download CV
+          <a href="resume-prathyusha.pdf" download>Download CV</a>
       </button>
          
           </div>
