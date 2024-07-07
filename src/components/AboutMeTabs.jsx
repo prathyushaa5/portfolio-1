@@ -55,9 +55,7 @@ const AboutMeTabs = () => {
           <div className="tab-contents mt-4">
             <div className={`tab-content ${activeTab === 'skills' ? 'active-tab' : 'hidden'}`} id="skills">
               <ul className="list-disc ml-8">
-                <li>
-                  <span className="font-bold text-white">Web development:</span> Designing web apps
-                </li>
+               
                 <li>
                   <span className="font-bold text-white">Front-end development:</span> Using HTML, CSS, JavaScript
                 </li>
@@ -71,7 +69,7 @@ const AboutMeTabs = () => {
               <ul className="list-disc ml-8">
                 <li>
                   <span className="font-bold text-white">Zephyr Technologies, Mangalore:</span> 
-                  <p>During this internship, I worked on various web development projects.I gained hands-on experience in building responsive web applications.This internship enhanced my skills in front-end development with Bootstrap, including creating layouts, forms etc</p></li>
+                  <p> I worked on various web development projects.I gained hands-on experience in building responsive web applications.This internship enhanced my skills in front-end development with Bootstrap, including creating layouts, forms etc</p></li>
               </ul>
             </div>
 

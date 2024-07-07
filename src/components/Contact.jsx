@@ -1,32 +1,128 @@
-import React from 'react';
-import { FaEnvelope, FaInstagram, FaLinkedin, FaFacebook, FaPhone, FaWhatsapp } from 'react-icons/fa';
+import React, { useState } from 'react';
 
-const Contact = () => {
+export default function Contact() {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const { firstName, lastName, email, message } = formData;
+
+    // Replace with your Formspree endpoint
+    const endpoint = 'https://formspree.io/f/mpwazbnv';
+
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          firstName,
+          lastName,
+          email,
+          message
+        })
+      });
+
+      if (response.ok) {
+        alert('Message sent successfully!');
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          message: ''
+        });
+      } else {
+        alert('Failed to send message. Please try again later.');
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      alert('Failed to send message. Please try again later.');
+    }
+  };
+
   return (
-    <div className="mt-40 flex flex-col  items-center">
-      <div className="container">
-        {/* Email */}
-        <div className="flex items-center mb-4">
-          <FaEnvelope className="text-4xl mr-2 text-gray-600" />
-          <a href="mailto:prathyushaacharya050@gmail.com">prathyushaacharya050@gmail.com</a>
+    <div className="py-2 px-4 mx-auto max-w-screen-md mt-40">
+      <h2 className="mb-4 text-4xl font-extrabold text-center text-white bg-black">
+        Contact Me
+      </h2>
+
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="flex flex-row">
+          <div className="w-1/2 pr-2">
+            <label htmlFor="firstName" className="block my-2 text-left text-sm font-medium text-white">
+              First Name
+            </label>
+            <input
+              type="text"
+              name="firstName"
+              value={formData.firstName}
+              onChange={handleChange}
+              className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+              placeholder="Enter First Name"
+              required
+            />
+          </div>
+          <div className="w-1/2 pl-2">
+            <label htmlFor="lastName" className="block my-2 text-left text-sm font-medium text-white">
+              Last Name
+            </label>
+            <input
+              type="text"
+              name="lastName"
+              value={formData.lastName}
+              onChange={handleChange}
+              className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+              placeholder="Enter Last Name"
+            />
+          </div>
         </div>
-        
-        {/* Phone */}
-        <div className="flex items-center mb-4">
-          <FaPhone className="text-4xl mr-2 text-gray-600" />
-          <a href="tel:7483259731">7483259731</a>
+        <div>
+          <label htmlFor="email" className="block my-2 text-left text-sm font-medium text-white">
+            Your email
+          </label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+            placeholder="abc@gmail.com"
+            required
+          />
         </div>
-        
-        {/* Social Icons */}
-        <div className="flex">
-          <a href="" className="mr-4"><FaInstagram className="text-4xl text-pink-500 hover:text-pink-700" /></a>
-          <a href="https://www.linkedin.com/in/prathyusha-acharya/" className="mr-4"><FaLinkedin className="text-4xl text-blue-500 hover:text-blue-700" /></a>
-          <a href="#" className="mr-4"><FaFacebook className="text-4xl text-blue-700 hover:text-blue-900" /></a>
-          <a href="https://wa.me/7338499857"><FaWhatsapp className="text-4xl text-green-500 hover:text-green-700" /></a>
+
+        <div>
+          <label htmlFor="message" className="block my-2 text-left text-sm font-medium text-white">
+            Your message
+          </label>
+          <textarea
+            rows="6"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300"
+            placeholder="Query/Suggestion..."
+          />
         </div>
-      </div>
+
+        <button
+          type="submit"
+          className="mt-2 p-2 float-right text-white rounded-lg border-green-600 bg-green-600 hover:scale-105"
+        >
+          Send message
+        </button>
+      </form>
     </div>
   );
-};
-
-export default Contact;
+}
