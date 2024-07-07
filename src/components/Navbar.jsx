@@ -12,6 +12,9 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -85,7 +88,7 @@ const Navbar = () => {
             <Link
               key={path}
               to={path}
-              className="block text-base uppercase cursor-pointer hover:text-gray-300"
+              className="block text-base uppercase cursor-pointer hover:text-gray-300"  onClick={closeMenu}
             >
               {link}
             </Link>
