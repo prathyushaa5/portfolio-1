@@ -54,6 +54,22 @@ const Project = () => {
           </a>
         </div>
       </div>
+       {/* Project  */}
+       <div className="max-w-xl w-full bg-gray-800 text-white rounded-lg shadow-md overflow-hidden">
+        <div className="p-4">
+          <h2 className="text-lg font-semibold mb-2">Book Bridge Using MERN</h2>
+          <p className="text-sm text-gray-300 mb-4">
+          Developed Book Bridge, a MERN stack application enabling users to buy and sell books seamlessly. This platform provides a user-friendly interface for managing listings, processing transactions, and connecting book enthusiasts.
+          </p>
+          <a
+            href="https://github.com/prathyushaa5/Book-Store"
+            className="flex items-center text-gray-300 hover:text-gray-200"
+          >
+            <FaGithub className="w-6 h-6 mr-2" />
+            View on GitHub
+          </a>
+        </div>
+      </div>
     </div>
   );
 };
