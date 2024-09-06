@@ -46,7 +46,7 @@ const Project = () => {
             I developed a dynamic Weather App using React and the Open-Meteo API. The app offers real-time weather data, including temperature, timings, and wind speed for multiple countries.
           </p>
           <a
-            href="https://github.com/prathyushaa5/Weather-app"
+            href="https://github.com/prathyushaa5/WeatherApp"
             className="flex items-center text-gray-300 hover:text-gray-200"
           >
             <FaGithub className="w-6 h-6 mr-2" />
